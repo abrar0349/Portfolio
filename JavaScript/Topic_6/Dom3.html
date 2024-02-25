@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom topic 3 on createElement</title>
+
+    <style>
+        .main{
+            color : green;
+            text-align: center;
+            padding-top: 10px;
+            background-color : blue;
+            height: 20vh;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        const div = document.createElement('div')
+        console.log(div)
+        div.className = 'main'
+        div.id = Math.round(Math.random() * 10 + 1)
+        div.setAttribute('title','generate title')
+        div.style.border = "2px solid black"
+        // let heading = div.innerText= 'khan is khan'
+        let text = document.createTextNode('khan is khan')
+        // text.style.color = 'red'
+        // texdt.style.textAlign = 'center'
+        div.appendChild(text)
+        document.querySelector('body').appendChild(div)
+    </script>
+</body>
+</html>

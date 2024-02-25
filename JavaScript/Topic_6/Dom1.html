@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document Object Module</title>
+    <style>
+     .heading{
+        color: red;
+     }
+    </style>
+
+</head>
+<body>
+    <h1 id = 'title' class = 'heading' style="background-color: aqua;font-size: 10vh;">DOM learning practice <span> on html </span> </h1>
+
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <p>Lorem ipsum dolor sit.</p>
+
+    <input type="password" name = '' id = ''>
+
+   <dl>
+    <dt>Coffee</dt>
+    <dd>Black hot drink</dd>
+    <dt>Milk</dt>
+    <dd>White cold drink</dd>
+   </dl>
+</body>
+
+<script>
+
+    const h1 = document.getElementById('title')
+    console.log(h1.innerText)
+    console.log(h1.tagName)
+    console.log(h1.id)
+    console.log(h1.className)
+    console.log(h1.classList)
+    console.log(h1.style)
+
+</script>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 5vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .input{
+            display: flex;
+            flex-direction: column;
+            gap: 5vh;
+        }
+        .input input{
+            border: none;
+            border-radius: 0.5vw;
+            outline: none;
+        }
+        button{
+            border: 3px solid;
+            width: 12vw;
+            height: 8vh;
+            font-size: 1.5vw;
+            border-radius: 1.5vw;
+        }
+    </style>
+</head>
+<body style="background-color: gray;">
+<div class="container">
+    <h1>DMI CALCULATOR</h1>
+
+<div class="input">
+    <LAbel>Height In CM <input type="text" id=""></LAbel>
+    <LAbel>Weight In KG <input type="text" id=""></LAbel>
+</div>
+    <button>Calculate</button>
+
+    <p id = 'ans'>Your Weight</p>
+    <div class="guide">
+        <h3>BMI Weight Guide</h3>
+
+        <p>Under Weight = Less than 18.6</p>
+        <p>Normal Range = 18.6 and 24.9 </p>
+        <p>Overweight = Greater than 24.9 </p>
+
+    </div>
+
+</div>
+</body>
+<script>
+
+    const input = document.querySelectorAll('.input input')
+    const button = document.querySelector('button')
+    const ans = document.getElementById('ans')
+
+    button.addEventListener('click',Weight)
+
+    function Weight(){
+    
+        // console.log(input[0].value,
+        // input[1].value)
+        let firValue = parseInt(input[0].value)
+        let secValue = parseInt(input[1].value)
+
+        // console.log(firValue,secValue)
+
+        if(firValue == NaN && firValue == '' && firValue < 0){
+            ans.innerHTML = 'Please enter valid Height'
+        }else if(secValue == NaN && secValue == '' && secValue < 0){
+            ans.innerHTML = 'Please enter valid Weight'
+        }else{
+            const result = (secValue / ((firValue * firValue) / 10000)).toFixed(2);
+            ans.innerHTML = `Your Weight ${result}`
+        }
+
+    }
+</script>
+</html>
+
